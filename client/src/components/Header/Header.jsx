@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import styles from './Header.css';
-import axios from 'axios';
 
 const Header = () => {
 
