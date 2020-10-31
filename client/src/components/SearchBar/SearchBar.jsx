@@ -22,7 +22,7 @@ const SearchBar = ({getPokemon}) => {
     <div>
       <form>
         <label>
-          Pokemon Name or National Pokedex Number:
+          Pokemon Name:
           <input type='text' value={value} onChange={() => handleChange(event)}/>
         </label>
         <button onClick={() => handleSubmit(event)}>Search</button>

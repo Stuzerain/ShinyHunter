@@ -541,6 +541,9 @@ allowed = {
 "latias": true,
 "latios": true,
 "cresselia": true,
+"abra": true,
+"kadabra": true,
+"alakazam": true,
 
 /*** line between pokemon that are available in sword and shield and those that aren't ***/
 

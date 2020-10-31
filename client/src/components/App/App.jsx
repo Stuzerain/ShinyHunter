@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import Header from '../Header/Header.jsx';
 import SearchBar from '../SearchBar/SearchBar.jsx';
+import Container from '../Container/Container.jsx';
 
 const App = () => {
 
@@ -13,7 +14,12 @@ const App = () => {
   const getPokemon = (value) => {
     axios.get(`/Pokemon/${value}`)
       .then(results => {
-        setPokemonArray(pokemonArray.push(results.data))
+        if (typeof results.data !== 'string') {
+          setPokemonArray(pokemonArray => [...pokemonArray, results.data])
+        }
+        else {
+          alert(results.data);
+        }
         return;
       })
   }
@@ -22,6 +28,7 @@ const App = () => {
     <div className={styles.app}>
       <Header />
       <SearchBar getPokemon={getPokemon}/>
+      <Container pokemonArray={pokemonArray}/>
       <div >this is working out as a test</div>
     </div>
   )
