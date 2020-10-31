@@ -3,6 +3,29 @@
 }
 
 .title {
-  font-size: 32px;
+  font-size: 64px;
   text-align: center;
+}
+
+.modeSelect {
+  display: flex;
+  justify-content: center;
+}
+
+.viewer {
+  max-width: 100px;
+  margin: 5px;
+  border-radius: 50px;
+  flex: 50%
+}
+
+.collection {
+  max-width: 100px;
+  margin: 5px;
+  border-radius: 50px;
+  flex: 50%
+}
+
+.activeTab {
+  background: lightgray;
 }

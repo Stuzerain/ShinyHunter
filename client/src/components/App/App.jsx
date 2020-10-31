@@ -10,6 +10,7 @@ import Container from '../Container/Container.jsx';
 const App = () => {
 
   const [pokemonArray, setPokemonArray] = useState([]);
+  const [tab, setTab] = useState('viewer');
 
   const getPokemon = (value) => {
     axios.get(`/Pokemon/${value}`)
@@ -24,14 +25,24 @@ const App = () => {
       })
   }
 
-  return (
-    <div className={styles.app}>
-      <Header />
-      <SearchBar getPokemon={getPokemon}/>
-      <Container pokemonArray={pokemonArray}/>
-      <div >this is working out as a test</div>
-    </div>
-  )
+  if (tab === 'viewer') {
+    return (
+      <div className={styles.app}>
+        <Header tab={tab} setTab={setTab}/>
+        <SearchBar getPokemon={getPokemon}/>
+        <Container pokemonArray={pokemonArray}/>
+      </div>
+    )
+  }
+
+  if (tab === 'collection') {
+    return (
+      <div className={styles.app}>
+        <Header tab={tab} setTab={setTab}/>
+        <div>collection mode</div>
+      </div>
+    )
+  }
 }
 
 export default App;

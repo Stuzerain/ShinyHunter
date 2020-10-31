@@ -6,6 +6,10 @@ const PokeInfo = ({pokeInfo}) => {
 
   const [caught, setCaught] = useState(false);
 
+  const toggleCaught = () => {
+    setCaught(!caught);
+  }
+
   return (
     <div className={styles.block}>
       <div>{pokeInfo.dex}: {pokeInfo.name}</div>
@@ -14,7 +18,7 @@ const PokeInfo = ({pokeInfo}) => {
 
         <label>
           Caught
-          <input type='checkbox' name='caught' value={caught} />
+          <input type='checkbox' name='caught' value={caught} onChange={() => toggleCaught()}/>
         </label>
     </div>
   )
