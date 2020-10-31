@@ -1,11 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './Container.css';
+import PokeInfo from '../PokeInfo/PokeInfo.jsx';
 
 const Container = ({pokemonArray}) => {
 
-  let boxes = pokemonArray.map((pokemon, index) =>
-  <div>yeet babes</div>
+  let boxes = pokemonArray.map((pokeInfo, index) =>
+  <PokeInfo pokeInfo={pokeInfo} key={index} />
   )
 
   return (

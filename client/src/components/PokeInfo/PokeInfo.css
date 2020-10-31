@@ -1,0 +1,9 @@
+.block {
+  margin: 5px;
+  border: 1px solid black;
+  text-transform: capitalize;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
