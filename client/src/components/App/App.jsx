@@ -8,10 +8,12 @@ import SearchBar from '../SearchBar/SearchBar.jsx';
 
 const App = () => {
 
+  const [pokemonArray, setPokemonArray] = useState([]);
+
   const getPokemon = (value) => {
     axios.get(`/Pokemon/${value}`)
       .then(results => {
-        console.log(results.data);
+        setPokemonArray(pokemonArray.push(results.data))
         return;
       })
   }
