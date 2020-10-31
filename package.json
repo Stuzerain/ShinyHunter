@@ -1,0 +1,33 @@
+{
+  "name": "shiny-hunter",
+  "version": "1.0.0",
+  "description": "A proof of concept utility/companion for hunting shiny pokemon",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.1.0"
+  },
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stuzerain/hrr48-mvp.git"
+  },
+  "author": "Stu Hanford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stuzerain/hrr48-mvp/issues"
+  },
+  "homepage": "https://github.com/Stuzerain/hrr48-mvp#readme"
+}
