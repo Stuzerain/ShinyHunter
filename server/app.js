@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json());
 
 // routes
+app.use('/', express.static('./client/public'))
 //TODO
 
 
