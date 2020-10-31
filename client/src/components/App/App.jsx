@@ -8,11 +8,18 @@ import SearchBar from '../SearchBar/SearchBar.jsx';
 
 const App = () => {
 
+  const getPokemon = (value) => {
+    axios.get(`/Pokemon/${value}`)
+      .then(results => {
+        console.log(results.data);
+        return;
+      })
+  }
 
   return (
     <div className={styles.app}>
       <Header />
-      <SearchBar />
+      <SearchBar getPokemon={getPokemon}/>
       <div >this is working out as a test</div>
     </div>
   )

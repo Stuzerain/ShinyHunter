@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import styles from './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = ({getPokemon}) => {
 
   // state to keep track of form value
   const [value, setValue] = useState('');
@@ -11,8 +11,10 @@ const SearchBar = () => {
     setValue(event.target.value);
   }
 
-  const handleSubmit = () => {
-    console.log(value);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    getPokemon(value)
+    setValue('');
   }
 
 
@@ -23,8 +25,8 @@ const SearchBar = () => {
           Pokemon Name or National Pokedex Number:
           <input type='text' value={value} onChange={() => handleChange(event)}/>
         </label>
+        <button onClick={() => handleSubmit(event)}>Search</button>
       </form>
-        <button onClick={() => handleSubmit()}>Search</button>
     </div>
   )
 }
