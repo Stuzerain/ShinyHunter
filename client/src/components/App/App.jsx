@@ -9,8 +9,28 @@ import Container from '../Container/Container.jsx';
 
 const App = () => {
 
-  const [pokemonArray, setPokemonArray] = useState([]);
+  /* STATE GUIDE
+   * pokemonArray: all Pokemon currently in the viewer -- does not persist unless added to collection by marking them 'caught'
+   *
+   *
+   */
   const [tab, setTab] = useState('viewer');
+  const [pokemonArray, setPokemonArray] = useState([]);
+  const [collection, setCollection] = useState([]);
+
+
+  useEffect(() => {
+    getCollection();
+  },
+  [] // this ensures that getCollection() is only called the first time the page loads and not any time a state changes
+   );
+
+  const getCollection = () => {
+    axios.get('/collection')
+      .then(results => {
+        setCollection(results.data);
+      })
+  }
 
   const getPokemon = (value) => {
     axios.get(`/Pokemon/${value}`)
@@ -25,6 +45,11 @@ const App = () => {
       })
   }
 
+
+
+
+
+  /***    JSX for rendering page     ***/
   if (tab === 'viewer') {
     return (
       <div className={styles.app}>

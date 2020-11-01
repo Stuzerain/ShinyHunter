@@ -19,7 +19,7 @@ const SearchBar = ({getPokemon}) => {
 
 
   return (
-    <div>
+    <div className={styles.searchBar}>
       <form>
         <label>
           Pokemon Name:
