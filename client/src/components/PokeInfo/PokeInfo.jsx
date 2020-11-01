@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import styles from './PokeInfo.css';
 import axios from 'axios';
 
-const PokeInfo = ({pokeInfo}) => {
+const PokeInfo = ({pokeInfo, getCollection}) => {
 
   const [caught, setCaught] = useState(false);
 
@@ -12,10 +12,11 @@ const PokeInfo = ({pokeInfo}) => {
       addCollection();
     }
     setCaught(!caught);
+    getCollection();
   }
 
   const addCollection = () => {
-    axios.post(`/Pokemon/${pokeInfo.name}`);
+    axios.post(`/Pokemon/${pokeInfo.name}`)
   }
 
   return (

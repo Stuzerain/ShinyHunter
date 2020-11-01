@@ -79,5 +79,12 @@ app.post('/Pokemon/:param', async (req, res) => {
   }
 });
 
+app.delete('/collection/:name', async (req, res) => {
+  PokemonDB.findOneAndDelete({name: req.params.name})
+    .then(results => {
+      res.json(results);
+    });
+});
+
 
 module.exports = app;

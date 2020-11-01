@@ -55,7 +55,7 @@ const App = () => {
       <div className={styles.app}>
         <Header tab={tab} setTab={setTab}/>
         <SearchBar getPokemon={getPokemon}/>
-        <Container pokemonArray={pokemonArray}/>
+        <Container pokemonArray={pokemonArray} tab={tab} getCollection={getCollection}/>
       </div>
     )
   }
@@ -64,7 +64,7 @@ const App = () => {
     return (
       <div className={styles.app}>
         <Header tab={tab} setTab={setTab}/>
-        <div>collection mode</div>
+        <Container pokemonArray={collection} tab={tab} getCollection={getCollection}/>
       </div>
     )
   }

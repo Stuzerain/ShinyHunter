@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const db = require('./index.js');
 
 const PokemonSchema = new mongoose.Schema({
-  name: String,
+  name: {type: String, unique: true, dropDups: true},
   dex: Number,
   normalSprite: String,
   shinySprite: String,
