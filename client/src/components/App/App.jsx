@@ -6,6 +6,7 @@ import axios from 'axios';
 import Header from '../Header/Header.jsx';
 import SearchBar from '../SearchBar/SearchBar.jsx';
 import Container from '../Container/Container.jsx';
+import Odds from '../Odds/Odds.jsx';
 
 const App = () => {
 
@@ -56,6 +57,7 @@ const App = () => {
         <Header tab={tab} setTab={setTab}/>
         <SearchBar getPokemon={getPokemon}/>
         <Container pokemonArray={pokemonArray} tab={tab} getCollection={getCollection}/>
+        <Odds pokemonArray={pokemonArray} />
       </div>
     )
   }

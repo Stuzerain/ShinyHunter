@@ -1,0 +1,26 @@
+.oddsTable {
+  border: 2px solid black;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.battling {
+  border: 2px solid black;
+  margin: 5px;
+  flex: 33%;
+}
+
+.breeding {
+  border: 2px solid black;
+  margin: 5px;
+  flex: 33%;
+}
+
+.lament {
+  border: 2px solid black;
+  margin: 5px;
+  flex: 33%;
+}
