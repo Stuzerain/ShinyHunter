@@ -3,24 +3,27 @@
   margin: 5px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 
 .battling {
   border: 2px solid black;
   margin: 5px;
-  flex: 33%;
+  flex: 30%;
+  max-width: 200px;
 }
 
 .breeding {
   border: 2px solid black;
   margin: 5px;
-  flex: 33%;
+  flex: 30%;
+  max-width: 200px;
 }
 
 .lament {
   border: 2px solid black;
   margin: 5px;
-  flex: 33%;
+  flex: 30%;
+  max-width: 200px;
 }

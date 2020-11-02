@@ -12,18 +12,25 @@
   justify-content: center;
 }
 
+.home {
+  max-width: 100px;
+  margin: 5px;
+  border-radius: 50px;
+  flex: 25%
+}
+
 .viewer {
   max-width: 100px;
   margin: 5px;
   border-radius: 50px;
-  flex: 50%
+  flex: 25%
 }
 
 .collection {
   max-width: 100px;
   margin: 5px;
   border-radius: 50px;
-  flex: 50%
+  flex: 25%
 }
 
 .activeTab {

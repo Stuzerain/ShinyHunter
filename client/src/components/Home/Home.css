@@ -1,0 +1,21 @@
+.home {
+  margin: 5px;
+  display: flex;
+}
+
+.main {
+flex: 60%
+}
+
+.intro {
+
+}
+
+.feed {
+  border: 1px solid black;
+}
+
+.resources {
+  margin-left: 5px;
+  flex: 25%;
+}

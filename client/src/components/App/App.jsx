@@ -4,6 +4,7 @@ import styles from './App.css';
 import axios from 'axios';
 
 import Header from '../Header/Header.jsx';
+import Home from '../Home/Home.jsx';
 import SearchBar from '../SearchBar/SearchBar.jsx';
 import Container from '../Container/Container.jsx';
 import Odds from '../Odds/Odds.jsx';
@@ -15,7 +16,7 @@ const App = () => {
    *
    *
    */
-  const [tab, setTab] = useState('viewer');
+  const [tab, setTab] = useState('home');
   const [pokemonArray, setPokemonArray] = useState([]);
   const [collection, setCollection] = useState([]);
 
@@ -51,6 +52,15 @@ const App = () => {
 
 
   /***    JSX for rendering page     ***/
+  if (tab === 'home') {
+    return (
+      <div className={styles.app}>
+        <Header tab={tab} setTab={setTab}/>
+        <Home />
+      </div>
+    )
+  }
+
   if (tab === 'viewer') {
     return (
       <div className={styles.app}>

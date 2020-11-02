@@ -11,6 +11,15 @@ const Header = ({tab, setTab}) => {
 
       <span className={styles.modeSelect}>
         <button
+          id='home'
+          className={`${styles.home} ${tab === 'home' ? styles.activeTab : ''}`}
+          onClick={() => {
+            setTab('home');
+        }}>
+          HOME
+        </button>
+
+        <button
           id='viewer'
           className={`${styles.viewer} ${tab === 'viewer' ? styles.activeTab : ''}`}
           onClick={() => {
