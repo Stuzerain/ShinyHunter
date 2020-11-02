@@ -17,6 +17,9 @@ const Collection = ({pokeInfo, getCollection}) => {
       <div>{pokeInfo.dex}: {pokeInfo.name}</div>
       <img src={pokeInfo.normalSprite}></img>
       <img src={pokeInfo.shinySprite}></img>
+      <div>
+        It took you {pokeInfo.attempts} attempts to obtain this Pokemon!
+      </div>
       <button onClick={() => removeFromCollection()}>DELETE</button>
     </div>
   )

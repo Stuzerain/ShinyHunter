@@ -7,3 +7,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.number {
+  max-width: 55px;
+}

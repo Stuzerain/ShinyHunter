@@ -6,7 +6,8 @@ const PokemonSchema = new mongoose.Schema({
   dex: Number,
   normalSprite: String,
   shinySprite: String,
-  caught: {type: Boolean, default: false}
+  caught: {type: Boolean, default: false},
+  attempts: Number
 })
 
 const Pokemon = mongoose.model('Pokemon', PokemonSchema);
