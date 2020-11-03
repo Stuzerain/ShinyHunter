@@ -1,0 +1,56 @@
+.friendEntry {
+  margin: 5px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* max-width: 775px; */
+}
+
+.avatar {
+  margin: 5px;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  margin-right: 5px;
+}
+
+.text {
+
+}
+
+.huntingSprite {
+  margin: 2px;
+  width: 100px;
+  height: 100px;
+}
+
+.Kanto {
+  background-color: lightgreen;
+}
+.Johto {
+  background-color: lightyellow;
+}
+.Hoenn {
+  background-color: rgb(149, 243, 239);
+}
+.Sinnoh {
+  background-color: whitesmoke;
+}
+.Unova {
+  background-color: lightgray;
+}
+.Kalos {
+  background-color: rgb(165, 179, 220);
+}
+.Alola {
+  background-color: lightpink;
+}
+.Galar {
+  background-color: lightcoral;
+}
+
+button {
+  border-radius: 50px;
+  margin: 2px;
+}

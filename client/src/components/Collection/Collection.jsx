@@ -24,6 +24,8 @@ const Collection = ({pokeInfo, getCollection}) => {
     }
   }
 
+  let superlative = luck >= 50 ? 'unlucky' : 'lucky';
+
   const removeFromCollection = () => {
     axios.delete(`/collection/${pokeInfo.name}`)
       .then(() => {
@@ -33,14 +35,15 @@ const Collection = ({pokeInfo, getCollection}) => {
 
   return (
     <div className={styles.block}>
-      <div>{pokeInfo.dex}: {pokeInfo.name}</div>
+      <div className={styles.info}>{pokeInfo.dex}: {pokeInfo.name}</div>
       <img src={pokeInfo.normalSprite}></img>
       <img src={pokeInfo.shinySprite}></img>
       <div>
-        It took you {pokeInfo.attempts} attempts to obtain this Pokemon via {pokeInfo.breeding ? 'breeding' : 'catching'}!
-        That puts you in the {percentile(luck)} percentile of trainers!
+        It took you {pokeInfo.attempts} attempts to obtain this Pokemon via {pokeInfo.breeding ? 'breeding' : 'catching'}! <br />
+        That puts you in the {percentile(luck)} percentile of trainers! How {superlative}!
       </div>
-      <button onClick={() => removeFromCollection()}>DELETE</button>
+      <button className={styles.share}>SHARE</button>
+      <button className={styles.delete} onClick={() => removeFromCollection()}>DELETE</button>
     </div>
   )
 }

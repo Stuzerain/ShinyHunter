@@ -8,22 +8,22 @@
 
 
 .battling {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   margin: 5px;
   flex: 30%;
-  max-width: 200px;
+  max-width: 400px;
 }
 
 .breeding {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   margin: 5px;
   flex: 30%;
-  max-width: 200px;
+  max-width: 400px;
 }
 
 .lament {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   margin: 5px;
   flex: 30%;
-  max-width: 200px;
+  max-width: 400px;
 }

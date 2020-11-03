@@ -1,9 +1,25 @@
 .block {
   margin: 5px;
   border: 1px solid black;
-  text-transform: capitalize;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.info {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.share {
+  margin-left: 15px;
+  border-radius: 50px;
+  background-color: lightgreen;
+}
+
+.delete {
+  margin-left: 15px;
+  border-radius: 50px;
+  background-color: pink;
 }

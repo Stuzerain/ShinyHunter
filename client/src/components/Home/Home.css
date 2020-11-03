@@ -1,10 +1,12 @@
 .home {
   margin: 5px;
   display: flex;
+  justify-content: center;
 }
 
 .main {
-flex: 60%
+flex: 60%;
+max-width: 1050px;
 }
 
 .intro {
@@ -12,10 +14,15 @@ flex: 60%
 }
 
 .feed {
-  border: 1px solid black;
+  border-top: 2px solid black;
+  text-align: center;
 }
 
 .resources {
-  margin-left: 5px;
-  flex: 25%;
+  max-width: 475px;
+  border-left: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+  flex: 15%;
+  text-align: center;
 }

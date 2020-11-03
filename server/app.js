@@ -5,6 +5,7 @@ const app = express();
 const pokeList = require('./pokeList.js');
 const db = require('../database/index.js');
 const PokemonDB = require('../database/Pokemon.js');
+const Friends = require('../database/Friends.js');
 // const queryPokeAPI = require('./queryPokeAPI.js'); // for cleaning up and promisifying API calls if there is time later
 
 // middleware
@@ -48,6 +49,13 @@ app.get('/collection', async (req, res) => {
     });
 });
 
+app.get('/friends', async (req, res) => {
+  Friends.find()
+    .then(results => {
+      res.json(results);
+    });
+});
+
 app.post('/Pokemon/:param', async (req, res) => {
   let search = req.params.param.toLowerCase();
 
@@ -71,7 +79,7 @@ app.post('/Pokemon/:param', async (req, res) => {
         .catch(err => {
           console.error(err);
           return res.json('There was an error in the lookup, but it went through. The error is probably with PokeAPI.');
-        })
+        });
   }
   else if (pokeList[search] === false) {
     return res.json('This Pokemon is not currently available in Sword/Shield.');
@@ -79,6 +87,31 @@ app.post('/Pokemon/:param', async (req, res) => {
   else {
     return res.json('This is not a vaild Pokemon. Please check your spelling.');
   }
+});
+
+app.post('/friends', (req, res) => {
+  let friend = {};
+  friend.name = req.body.name;
+  friend.hunting = req.body.hunting;
+  friend.huntingNum = req.body.huntingNum;
+  friend.favRegion = req.body.favRegion;
+
+  axios.get(`https://pokeapi.co/api/v2/pokemon/${friend.hunting}`)
+    .then(results => {
+      friend.huntingSprite = results.data.sprites.front_shiny;
+      return axios.get(`https://pokeapi.co/api/v2/pokemon/${req.body.favorite}`)
+    })
+    .then(results => {
+      friend.avatar = results.data.sprites.front_shiny;
+      return Friends.create(friend)
+    })
+    .then(results => {
+      return res.json(results);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.json('There was an error adding to the friends list');
+    });
 });
 
 app.delete('/collection/:name', async (req, res) => {
