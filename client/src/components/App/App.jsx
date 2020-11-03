@@ -24,8 +24,8 @@ const App = () => {
   useEffect(() => {
     getCollection();
   },
-  [] // this ensures that getCollection() is only called the first time the page loads and not any time a state changes
-   );
+    [] // this ensures that getCollection() is only called the first time the page loads and not any time a state changes
+  );
 
   const getCollection = () => {
     axios.get('/collection')

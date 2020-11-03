@@ -544,6 +544,10 @@ allowed = {
 "abra": true,
 "kadabra": true,
 "alakazam": true,
+"dunsparce": true,
+"genesect": true,
+"cubone": true,
+"marowak": true,
 
 /*** line between pokemon that are available in sword and shield and those that aren't ***/
 

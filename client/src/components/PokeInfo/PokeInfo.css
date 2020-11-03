@@ -8,6 +8,20 @@
   justify-content: center;
 }
 
+.breeding {
+  margin: 5px;
+}
 .number {
+  margin: 5px;
+}
+.caught {
+  margin: 5px;
+}
+
+.text {
+
+}
+
+.numberEntry {
   max-width: 55px;
 }

@@ -62,6 +62,7 @@ app.post('/Pokemon/:param', async (req, res) => {
           pokemon.normalSprite = data.sprites.front_default;
           pokemon.shinySprite = data.sprites.front_shiny;
           pokemon.attempts = req.body.attempts;
+          pokemon.breeding = req.body.breeding;
           return PokemonDB.create(pokemon)
         })
         .then(result => {

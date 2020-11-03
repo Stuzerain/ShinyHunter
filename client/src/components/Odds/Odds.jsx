@@ -21,7 +21,7 @@ const Odds = ({pokemonArray}) => {
       </div>
 
       <div className={styles.lament}>
-        If you go out seeking shiny Pokemon, prepare for a bad time...
+        If you go out seeking shiny Pokemon, prepare for a bad time... The odds of encountering a shiny Pokemon at any time are independent of other encounters. This means that Even after 500 encounters without a shiny Pokemon, you are <em>NOT ANY MORE LIKELY</em> to encounter one than when you started.
       </div>
     </div>
   )
